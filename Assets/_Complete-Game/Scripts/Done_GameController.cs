@@ -23,8 +23,8 @@ public class Done_GameController : MonoBehaviour
 	{
 		gameOver = false;
 		restart = false;
-		restartText.text = "";
-		gameOverText.text = "";
+		restartText.text = "Restart Your Game";
+		gameOverText.text = "Game Really Over";
 		score = 0;
 		UpdateScore ();
 		StartCoroutine (SpawnWaves ());

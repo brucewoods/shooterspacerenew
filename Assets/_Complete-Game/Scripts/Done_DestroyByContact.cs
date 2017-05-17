@@ -23,24 +23,28 @@ public class Done_DestroyByContact : MonoBehaviour
 
 	void OnTriggerEnter (Collider other)
 	{
+
 		if (other.tag == "Boundary" || other.tag == "Enemy")
 		{
 			return;
 		}
 
-		if (explosion != null)
-		{
-			Instantiate(explosion, transform.position, transform.rotation);
-		}
-
+		
 		if (other.tag == "Player")
 		{
 			Instantiate(playerExplosion, other.transform.position, other.transform.rotation);
-			gameController.GameOver();
+            if (gameController != null)
+            gameController.GameOver();
 		}
-		
-		gameController.AddScore(scoreValue);
-		Destroy (other.gameObject);
+        if (explosion != null)
+        {
+            Instantiate(explosion, transform.position, transform.rotation);
+        }
+        if (gameController != null && scoreValue != null) { 
+	    gameController.AddScore(scoreValue);
+        }
+        Destroy (other.gameObject);
+        if(gameObject!=null)
 		Destroy (gameObject);
 	}
 }
