@@ -57,6 +57,7 @@
      <Compile Include="Assets\_Complete-Game\Scripts\Done_PlayerController.cs" />
      <Compile Include="Assets\_Complete-Game\Scripts\Done_RandomRotator.cs" />
      <Compile Include="Assets\_Complete-Game\Scripts\Done_WeaponController.cs" />
+     <Compile Include="Assets\_Complete-Game\Scripts\NewBehaviourScript.cs" />
  <Reference Include="Facebook.Unity.Settings">
  <HintPath>E:/workstation/u3d/SpaceShooterRenew/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
  </Reference>
